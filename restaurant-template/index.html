@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: page title and description (shows on Google) -->
+  <title>Ember &amp; Oak | Modern Restaurant</title>
+  <meta name="description" content="Fresh seasonal food, wood-fired flavors, and a warm welcome. Book a table today.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav">
+    <a href="#home" class="logo">Ember<span>&amp;</span>Oak</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn btn-small">Book a Table</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">Wood-fired &middot; Seasonal &middot; Local</p>
+      <h1>Food made with fire,<br>served with heart.</h1>
+      <p class="lead">Fresh ingredients, honest cooking, and a table waiting for you. Come hungry, leave happy.</p>
+      <div class="hero-buttons">
+        <a href="#visit" class="btn">Reserve a Table</a>
+        <a href="#menu" class="btn btn-outline">View Menu</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>12+</strong> years cooking</li>
+        <li><strong>4.9</strong> guest rating</li>
+        <li><strong>100%</strong> fresh daily</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <!-- Replace this whole block with: <img src="images/hero.jpg" alt="Your signature dish"> -->
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="200" r="190" fill="#2a211c"/>
+        <circle cx="200" cy="200" r="160" fill="#1b1512" stroke="#c8793a" stroke-width="3"/>
+        <circle cx="200" cy="200" r="120" fill="#3a2a20"/>
+        <circle cx="170" cy="180" r="38" fill="#c8793a"/>
+        <circle cx="230" cy="170" r="30" fill="#8aa05a"/>
+        <circle cx="215" cy="235" r="42" fill="#e0a458"/>
+        <circle cx="160" cy="240" r="24" fill="#a8452f"/>
+        <circle cx="200" cy="200" r="190" fill="none" stroke="#c8793a" stroke-opacity=".25" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="about-art" aria-hidden="true">
+      <!-- Replace with: <img src="images/about.jpg" alt="Our kitchen"> -->
+      <div class="ph ph-tall"><span>Your photo<br>(kitchen or chef)</span></div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">Our Story</p>
+      <h2>A kitchen built around good ingredients.</h2>
+      <p>We started with a simple idea: cook with fire, buy from people we know, and treat every guest like family. Today we serve the same honest food in a warm, relaxed space.</p>
+      <p>Write your own story here in two or three short sentences. Tell people who you are, what you cook, and why it matters to you.</p>
+      <a href="#menu" class="link-arrow">See what we're cooking &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="section menu" id="menu">
+    <div class="section-head">
+      <p class="eyebrow">The Menu</p>
+      <h2>Made fresh, every day.</h2>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="starters" role="tab">Starters</button>
+      <button class="tab" data-tab="mains" role="tab">Mains</button>
+      <button class="tab" data-tab="desserts" role="tab">Desserts</button>
+      <button class="tab" data-tab="drinks" role="tab">Drinks</button>
+    </div>
+
+    <!-- To add a dish, copy one <li class="dish"> block and change the text -->
+    <ul class="dishes active" id="starters">
+      <li class="dish"><div><h3>Charred Flatbread</h3><p>Garlic butter, herbs, sea salt</p></div><span class="price">$7</span></li>
+      <li class="dish"><div><h3>Roasted Tomato Soup</h3><p>Basil oil, toasted seeds</p></div><span class="price">$8</span></li>
+      <li class="dish"><div><h3>Crispy Calamari</h3><p>Lemon aioli, pickled chili</p></div><span class="price">$11</span></li>
+      <li class="dish"><div><h3>Seasonal Garden Salad</h3><p>Market greens, citrus dressing</p></div><span class="price">$9</span></li>
+    </ul>
+
+    <ul class="dishes" id="mains">
+      <li class="dish"><div><h3>Wood-Fired Chicken</h3><p>Herb marinade, roasted vegetables</p></div><span class="price">$18</span></li>
+      <li class="dish"><div><h3>Grilled Ribeye</h3><p>Chimichurri, crispy potatoes</p></div><span class="price">$28</span></li>
+      <li class="dish"><div><h3>Mushroom Risotto</h3><p>Parmesan, thyme, truffle oil</p></div><span class="price">$17</span></li>
+      <li class="dish"><div><h3>Catch of the Day</h3><p>Ask your server for today's fish</p></div><span class="price">$24</span></li>
+    </ul>
+
+    <ul class="dishes" id="desserts">
+      <li class="dish"><div><h3>Chocolate Fondant</h3><p>Warm center, vanilla cream</p></div><span class="price">$9</span></li>
+      <li class="dish"><div><h3>Honey Cheesecake</h3><p>Baked, berry compote</p></div><span class="price">$8</span></li>
+      <li class="dish"><div><h3>Seasonal Sorbet</h3><p>Three scoops, always dairy-free</p></div><span class="price">$6</span></li>
+    </ul>
+
+    <ul class="dishes" id="drinks">
+      <li class="dish"><div><h3>Fresh Lemonade</h3><p>Mint, lightly sweet</p></div><span class="price">$4</span></li>
+      <li class="dish"><div><h3>Cold Brew Coffee</h3><p>Slow-steeped, served over ice</p></div><span class="price">$5</span></li>
+      <li class="dish"><div><h3>House Iced Tea</h3><p>Peach and black tea</p></div><span class="price">$4</span></li>
+      <li class="dish"><div><h3>Sparkling Water</h3><p>Bottle to share</p></div><span class="price">$3</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="section-head">
+      <p class="eyebrow">Gallery</p>
+      <h2>A taste of the atmosphere.</h2>
+    </div>
+    <!-- Replace each .ph block with: <img src="images/photo1.jpg" alt="Describe the photo"> -->
+    <div class="grid">
+      <div class="ph ph-a"><span>Photo 1</span></div>
+      <div class="ph ph-b"><span>Photo 2</span></div>
+      <div class="ph ph-c"><span>Photo 3</span></div>
+      <div class="ph ph-d"><span>Photo 4</span></div>
+      <div class="ph ph-e"><span>Photo 5</span></div>
+      <div class="ph ph-f"><span>Photo 6</span></div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="section reviews">
+    <div class="section-head">
+      <p class="eyebrow">Guest Love</p>
+      <h2>What people are saying.</h2>
+    </div>
+    <div class="cards">
+      <blockquote><p>"The best meal we've had in months. Warm staff and the chicken was perfect."</p><cite>Guest Name</cite></blockquote>
+      <blockquote><p>"Cozy place, great flavors, and fair prices. We keep coming back."</p><cite>Guest Name</cite></blockquote>
+      <blockquote><p>"Booked for a birthday and everything was smooth. Highly recommended."</p><cite>Guest Name</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- ============ VISIT / BOOKING ============ -->
+  <section class="section visit" id="visit">
+    <div class="visit-info">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Come hungry.</h2>
+      <ul class="info-list">
+        <li><strong>Address</strong><span>123 Main Street, Your City</span></li>
+        <li><strong>Phone</strong><span><a href="tel:+10000000000">+1 000 000 0000</a></span></li>
+        <li><strong>Email</strong><span><a href="mailto:hello@yourrestaurant.com">hello@yourrestaurant.com</a></span></li>
+      </ul>
+      <h3>Opening hours</h3>
+      <ul class="hours">
+        <li><span>Mon &ndash; Thu</span><span>11:00 &ndash; 22:00</span></li>
+        <li><span>Fri &ndash; Sat</span><span>11:00 &ndash; 23:30</span></li>
+        <li><span>Sunday</span><span>12:00 &ndash; 21:00</span></li>
+      </ul>
+    </div>
+
+    <!-- Simple booking form. See README to connect it to Formspree (free). -->
+    <form class="booking" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <h3>Reserve a table</h3>
+      <label>Name<input type="text" name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <div class="row">
+        <label>Date<input type="date" name="date" required></label>
+        <label>Time<input type="time" name="time" required></label>
+      </div>
+      <label>Guests
+        <select name="guests">
+          <option>1 guest</option><option>2 guests</option><option selected>3 guests</option>
+          <option>4 guests</option><option>5 guests</option><option>6+ guests</option>
+        </select>
+      </label>
+      <button type="submit" class="btn">Request Booking</button>
+    </form>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <a href="#home" class="logo">Ember<span>&amp;</span>Oak</a>
+    <p>&copy; <span id="year">2026</span> Ember &amp; Oak. All rights reserved.</p>
+    <div class="social">
+      <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
